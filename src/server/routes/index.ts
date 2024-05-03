@@ -10,7 +10,7 @@ router.get('/todo', (req, res) => {
     })
 })
 
-router.post('/todo/item', todoListController.addItem);
-router.get('/todo/item', todoListController.getItems);
+router.post('/todo/item', todoListController.addItemValidator, todoListController.addItem);
+router.get('/todo/item',  todoListController.getItems);
 
 export { router }

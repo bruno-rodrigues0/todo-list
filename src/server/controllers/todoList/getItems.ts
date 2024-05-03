@@ -7,9 +7,9 @@ type TItem = {
     stats: TStats,
 }
 
-export const addItem = (req: Request, res: Response) => {
-    console.log(req.body)
+export const getItems = (req: Request, res: Response) => {
     return res.send({
+        body: req.body,
         message: 'added',
     })
 }

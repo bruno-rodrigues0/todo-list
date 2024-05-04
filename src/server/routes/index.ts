@@ -12,5 +12,6 @@ router.get('/', (req, res) => {
 
 router.get('/item',  todoListController.getItems);
 router.post('/item', todoListController.addItemValidator, todoListController.addItem);
+router.put('/item', todoListController.updateItemValidator, todoListController.updateItem);
 
 export { router }

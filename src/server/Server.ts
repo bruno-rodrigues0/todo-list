@@ -5,7 +5,7 @@ import 'dotenv/config';
 const server = express();
 
 server.use(express.json());
-server.use(router);
+server.use('/todo', router);
 
 export { server };
 

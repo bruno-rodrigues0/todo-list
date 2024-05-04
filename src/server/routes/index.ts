@@ -4,13 +4,13 @@ import { todoListController } from '../controllers';
 
 const router = Router();
 
-router.get('/todo', (req, res) => {
+router.get('/', (req, res) => {
     res.status(StatusCodes.OK).send({
         status: 'connected',
     })
 })
 
-router.post('/todo/item', todoListController.addItemValidator, todoListController.addItem);
-router.get('/todo/item',  todoListController.getItems);
+router.get('/item',  todoListController.getItems);
+router.post('/item', todoListController.addItemValidator, todoListController.addItem);
 
 export { router }

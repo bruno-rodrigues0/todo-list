@@ -3,7 +3,6 @@ import { validation } from "../../shared/middleware";
 import { StatusCodes } from "http-status-codes";
 import { pool as mysql } from "../../database";
 import * as yup from "yup";
-import { QueryError, QueryResult } from "mysql2";
 
 type TStats = "todo" | "in process" | "done";
 
